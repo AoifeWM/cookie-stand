@@ -7,17 +7,25 @@ let salesCurve;
 initSalesPage();
 
 function initSalesPage(){
-    hours = ['6 a.m.', '7 a.m.', '8 a.m.', '9 a.m.', '10 a.m.', '11 a.m.', '12 p.m.', '1 p.m.', '2 p.m.', '3 p.m.', '4 p.m.', '5 p.m.', '6 p.m.', '7 p.m.'];
-    locationsArray = [];
-    salesCurve = [0.5, 0.75, 1.0, 0.6, 0.8, 1.0, 0.7, 0.4, 0.6, 0.9, 0.7, 0.5, 0.3, 0.4, 0.6];
-    addLocations();
-    for (let i = 0; i < locationsArray.length; i++){
-        locationsArray[i].generateCookieSalesPerHour();
-    }
+    initVars();
+    constructLocations();
+    initLocations();
     renderAll();
 }
 
-function addLocations() {
+function initVars(){
+    hours = ['6 a.m.', '7 a.m.', '8 a.m.', '9 a.m.', '10 a.m.', '11 a.m.', '12 p.m.', '1 p.m.', '2 p.m.', '3 p.m.', '4 p.m.', '5 p.m.', '6 p.m.', '7 p.m.'];
+    locationsArray = [];
+    salesCurve = [0.5, 0.75, 1.0, 0.6, 0.8, 1.0, 0.7, 0.4, 0.6, 0.9, 0.7, 0.5, 0.3, 0.4, 0.6];
+}
+
+function initLocations(){
+    for (let i = 0; i < locationsArray.length; i++){
+        locationsArray[i].generateCookieSalesPerHour();
+    }
+}
+
+function constructLocations() {
     let seattle = new storeLocation('Seattle', 23, 65, 6.3);
     let tokyo = new storeLocation('Tokyo', 3, 24, 1.2);
     let dubai = new storeLocation('Dubai', 11, 38, 3.7);
