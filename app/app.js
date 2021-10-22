@@ -4,8 +4,6 @@ let hours;
 let locationsArray;
 let salesCurve;
 
-initSalesPage();
-
 function initSalesPage(){
     initVars();
     constructLocations();
