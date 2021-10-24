@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="app/app.js"></script>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div id="store"></div>
-    <script src="app/app.js">renderAllLists();</script>
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/salmon.png" alt="Welcome to Salmon Cookies!"></a>
+            <ul>
+                <li><a href="index.html#about">About us</a></li>
+                <li><a href="index.html#locations">Locations</a></li>
+                <li><a href="index.html#merch">Merch</a></li>
+                <li><a href="index.html#contact">Contact us</a></li>
+                <li><a href="sales.html">Sales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="storeForm" onsubmit="return false">
+            <fieldset>
+                <legend>Add a store</legend>
+                <label>Store Name</label>
+                <input name="storeName" type="text" placeholder="Store Name">
+                <label>Minimum customers/hr</label>
+                <input name="minCustomers" type="number" placeholder="Minimum costumers">
+                <label>Maximum customers/hr</label>
+                <input name="maxCustomers" type="number" placeholder="Maximum customers">
+                <label>Average cookies/customer</label>
+                <input name="avgCustomers" type="number" placeholder="Average cookies/customer">
+            </fieldset>
+            <button type="submit">Add Store</button>
+        </form>
+
+
+        <div id="store"></div>
+        <script>initSalesPage();</script>
+    </main>
 </body>
 </html>
