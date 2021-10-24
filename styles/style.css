@@ -83,6 +83,12 @@ main img {
     color: rgb(52, 20, 4);
 }
 
+#locations article {
+    display: inline-block;
+    width: 185px;
+    justify-content: space-between;
+}
+
 #merch {
     display: flex;
     width: 960px;
@@ -159,4 +165,25 @@ table, tr, th, td {
 
 #merchh2 {
     display: block;
+}
+
+form {
+    border: black 3px solid;
+}
+
+label {
+    display: block;
+}
+
+legend {
+    font-weight: bold;
+}
+
+input {
+    display: block;
+}
+
+h4 {
+    font-family: 'Rampart One', cursive;
+    font-size: 2rem;
 }

@@ -21,6 +21,22 @@
         </nav>
     </header>
     <main>
+        <form id="storeForm" onsubmit="return false">
+            <fieldset>
+                <legend>Add a store</legend>
+                <label>Store Name</label>
+                <input name="storeName" type="text" placeholder="Store Name">
+                <label>Minimum customers/hr</label>
+                <input name="minCustomers" type="number" placeholder="Minimum costumers">
+                <label>Maximum customers/hr</label>
+                <input name="maxCustomers" type="number" placeholder="Maximum customers">
+                <label>Average cookies/customer</label>
+                <input name="avgCustomers" type="number" placeholder="Average cookies/customer">
+            </fieldset>
+            <button type="submit">Add Store</button>
+        </form>
+
+
         <div id="store"></div>
         <script>initSalesPage();</script>
     </main>
