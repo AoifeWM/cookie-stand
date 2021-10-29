@@ -46,7 +46,9 @@ function storeLocation(storeName, minCustomers, maxCustomers, averageSale){
     this.totalCookiesDay = 0;
     this.customersPerHourArray = [];
     this.getRandomCustomers = function(hour){ 
-        return Math.floor(salesCurve[hour] * (Math.random() * (this.max - this.min + 1) + this.min));
+        let placeholder = Math.random();
+        console.log(`${this.name}: Random (${placeholder}) times difference (${(this.max - this.min + 1)}) + this.min (${this.min}) equals ${(placeholder*(this.max - this.min + 1) + this.min)}`);
+        return Math.floor(salesCurve[hour] * (placeholder*(this.max - this.min + 1) + this.min));
     };
     this.generateCookieSalesPerHour = function(){
         for(let i = 0; i <  hours.length; i++){
@@ -196,14 +198,14 @@ function newStoreFromForm(event){
     console.log(cookieTable);
     let newStore = new storeLocation(
         event.target.storeName.value,
-        event.target.minCustomers.value,
-        event.target.maxCustomers.value,
-        event.target.avgCustomers.value
+        parseInt(event.target.minCustomers.value),
+        parseInt(event.target.maxCustomers.value),
+        parseInt(event.target.avgCustomers.value)
     );
     initLocation(newStore);
     cookieTable.removeChild(document.getElementById('cookieTableFooter'));
     cookieTable.appendChild(newStore.renderCookies());
     cookieTable.appendChild(generateCookieTableFooter());
     staffTable.appendChild(newStore.renderStaff());
-    event.target.reset();
+    //event.target.reset();
 }

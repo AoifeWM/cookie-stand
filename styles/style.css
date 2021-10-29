@@ -4,6 +4,8 @@
 
 body {
     background-color: bisque;
+    font-family: Times;
+    color:rgb(55, 49, 13);
 }
 
 #about img {
@@ -19,7 +21,7 @@ header {
 }
 
 h2 {
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     font-size: 2.5rem;
     font-family: 'Lobster', cursive;
     padding-bottom: 0.5rem;
@@ -103,6 +105,10 @@ height: 300px;
     width: 338px;
 }
 
+#merch article p {
+    margin-top: 1rem;
+}
+
 #about article { 
     float: right;
     width: 480px;
@@ -161,6 +167,7 @@ footer p {
 table, tr, th, td {
     border: 5px black solid;
     padding: 3px;
+    font-family: Arial;
 }
 
 #merchh2 {
@@ -186,4 +193,9 @@ input {
 h4 {
     font-family: 'Rampart One', cursive;
     font-size: 2rem;
+}
+
+main #locations article ul li:nth-of-type(1){
+    font-style: italic;
+    margin-bottom: 0.5rem;
 }
